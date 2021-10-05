@@ -1,0 +1,12 @@
+@import '../../index.scss';
+
+.sidebar {
+   background: $black-secondary;
+   display: flex;
+   flex-direction: column;
+   width: 225px;
+   height:90vh,
+   padding-top:2rem;
+
+
+}

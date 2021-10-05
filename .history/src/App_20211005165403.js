@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="app_container ">
+      <div className="app_container border border-info">
         <Sidebar />
         <Container fluid className="app_main border border-warning">
           <HomeScreen />

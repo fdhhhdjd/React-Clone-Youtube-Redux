@@ -6,9 +6,9 @@ function App() {
   return (
     <>
       <Header />
-      <div className="app_container ">
+      <div className="app_container">
         <Sidebar />
-        <Container fluid className="app_main border border-warning">
+        <Container fluid className="app_main">
           <HomeScreen />
         </Container>
       </div>

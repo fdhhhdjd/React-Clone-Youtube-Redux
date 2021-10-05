@@ -11,25 +11,31 @@ import {
   MdSentimentDissatisfied,
 } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import { log_out } from "../../redux/actions/auth.action";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ sidebar, handleToggleSidebar }) => {
   const dispatch = useDispatch();
-  const logOutHandler = () => {};
+  const logOutHandler = () => {
+    dispatch(log_out());
+  };
   return (
-    <nav className="sidebar">
-      {/* <Link to="/"> */}
-      <li>
-        <MdHome size={23} />
-        <span>Home</span>
-      </li>
-      {/* </Link> */}
-      {/* <Link to="/feed/subscriptions"> */}
-      <li>
-        <MdSubscriptions size={23} />
-        <span>Subscriptions</span>
-      </li>
-      {/* </Link> */}
+    <nav
+      className={sidebar ? "sidebar open" : "sidebar"}
+      onClick={() => handleToggleSidebar(false)}
+    >
+      <Link to="/">
+        <li>
+          <MdHome size={23} />
+          <span>Home</span>
+        </li>
+      </Link>
+      <Link to="/feed/subscriptions">
+        <li>
+          <MdSubscriptions size={23} />
+          <span>Subscriptions</span>
+        </li>
+      </Link>
 
       <li>
         <MdThumbUp size={23} />

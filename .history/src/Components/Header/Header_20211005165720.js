@@ -18,7 +18,11 @@ const Header = () => {
 
   return (
     <div className="header ">
-      <FaBars className="header__menu" size={26} />
+      <FaBars
+        className="header__menu"
+        size={26}
+        onClick={() => handleToggleSidebar()}
+      />
 
       <img
         src="http://pngimg.com/uploads/youtube/youtube_PNG2.png"

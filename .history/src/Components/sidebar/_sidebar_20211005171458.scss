@@ -1,0 +1,24 @@
+@import '../../index.scss';
+
+.sidebar {
+   background: $black-secondary;
+   display: flex;
+   flex-direction: column;
+   width: 225px;
+   height:90vh;
+   padding-top:2rem;
+   position:sticky;
+   top:10vh;
+   left: 0;
+   a{
+      color:$text-color;
+      &hover{
+         color:$text-color;
+         text-decoration: none;
+      }
+   }
+   li{
+      display: flex;
+      text-decoration: none;
+   }
+}
