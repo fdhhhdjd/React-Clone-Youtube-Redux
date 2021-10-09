@@ -7,15 +7,14 @@ import {
 import "./_categoriesBar.scss";
 const keywords = [
   "All",
-  "Quốc Màng Tang",
-  "Sơn Tùng",
   "React js",
+  "Angular js",
   "React Native",
-  "Nhạc sàn",
+  "use of API",
   "Redux",
-  "Khoa Pug",
-  "Huấn Hoa Hồng ",
   "Music",
+  "Algorithm Art ",
+  "Guitar",
   "Bengali Songs",
   "Coding",
   "Cricket",
@@ -25,8 +24,10 @@ const keywords = [
   "Poor Coder",
   "Shwetabh",
 ];
+
 const CategoriesBar = () => {
   const [activeElement, setActiveElement] = useState("All");
+
   const dispatch = useDispatch();
   const handleClick = (value) => {
     setActiveElement(value);
@@ -36,12 +37,13 @@ const CategoriesBar = () => {
       dispatch(getVideosByCategory(value));
     }
   };
+
   return (
     <div className="categoriesBar">
       {keywords.map((value, i) => (
         <span
           onClick={() => handleClick(value)}
-          key={value}
+          key={i}
           className={activeElement === value ? "active" : ""}
         >
           {value}

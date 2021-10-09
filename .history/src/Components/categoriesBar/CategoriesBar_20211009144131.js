@@ -6,16 +6,15 @@ import {
 } from "../../Redux/Action/VideoAction";
 import "./_categoriesBar.scss";
 const keywords = [
-  "All",
   "Quốc Màng Tang",
   "Sơn Tùng",
   "React js",
   "React Native",
   "Nhạc sàn",
   "Redux",
-  "Khoa Pug",
-  "Huấn Hoa Hồng ",
   "Music",
+  "Huấn Hoa Hồng ",
+  "Guitar",
   "Bengali Songs",
   "Coding",
   "Cricket",

@@ -9,7 +9,7 @@ export const getPopularVideos = () => async (dispatch, getState) => {
       params: {
         part: "snippet,contentDetails,statistics",
         chart: "mostPopular",
-        regionCode: "VN",
+        regionCode: "IN",
         maxResults: 20,
         pageToken: getState().homeVideos.nextPageToken,
       },
@@ -20,7 +20,7 @@ export const getPopularVideos = () => async (dispatch, getState) => {
       payload: {
         videos: data.items,
         nextPageToken: data.nextPageToken,
-        category: "All",
+        category: "Quốc Màng Tang",
       },
     });
   } catch (error) {

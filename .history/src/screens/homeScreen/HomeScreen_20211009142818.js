@@ -20,7 +20,7 @@ const HomeScreen = () => {
     if (activeCategory === "All") {
       dispatch(getPopularVideos());
     } else {
-      dispatch(getVideosByCategory(activeCategory));
+      dispatch(getVideosByCategory(value));
     }
   };
 

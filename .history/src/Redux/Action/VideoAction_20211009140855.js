@@ -5,11 +5,11 @@ export const getPopularVideos = () => async (dispatch, getState) => {
     dispatch({
       type: types.HOME_VIDEOS_REQUEST,
     });
-    const { data } = await request("/videos", {
+    const { data } = await request("/sontung", {
       params: {
         part: "snippet,contentDetails,statistics",
         chart: "mostPopular",
-        regionCode: "VN",
+        regionCode: "IN",
         maxResults: 20,
         pageToken: getState().homeVideos.nextPageToken,
       },

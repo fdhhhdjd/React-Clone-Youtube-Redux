@@ -9,7 +9,7 @@ export const getPopularVideos = () => async (dispatch, getState) => {
       params: {
         part: "snippet,contentDetails,statistics",
         chart: "mostPopular",
-        regionCode: "VN",
+        regionCode: "IN",
         maxResults: 20,
         pageToken: getState().homeVideos.nextPageToken,
       },
@@ -34,7 +34,7 @@ export const getPopularVideos = () => async (dispatch, getState) => {
 export const getVideosByCategory = (keyword) => async (dispatch, getState) => {
   try {
     dispatch({
-      type: types.HOME_VIDEOS_REQUEST,
+      type: HOME_VIDEOS_REQUEST,
     });
     const { data } = await request("/search", {
       params: {
@@ -48,7 +48,7 @@ export const getVideosByCategory = (keyword) => async (dispatch, getState) => {
     });
 
     dispatch({
-      type: types.HOME_VIDEOS_SUCCESS,
+      type: HOME_VIDEOS_SUCCESS,
       payload: {
         videos: data.items,
         nextPageToken: data.nextPageToken,
@@ -58,7 +58,7 @@ export const getVideosByCategory = (keyword) => async (dispatch, getState) => {
   } catch (error) {
     console.log(error.message);
     dispatch({
-      type: types.HOME_VIDEOS_FAIL,
+      type: HOME_VIDEOS_FAIL,
       payload: error.message,
     });
   }

@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { CategoriesBar, Video } from "../../Import";
-import {
-  getPopularVideos,
-  getVideosByCategory,
-} from "../../Redux/Action/VideoAction";
+import { getPopularVideos } from "../../Redux/Action/VideoAction";
 import InfiniteScroll from "react-infinite-scroll-component";
 import SkeletonVideo from "../../Components/skeletons/SkeletonVideo";
 const HomeScreen = () => {
@@ -17,11 +14,7 @@ const HomeScreen = () => {
     dispatch(getPopularVideos());
   }, [dispatch]);
   const fetchData = () => {
-    if (activeCategory === "All") {
-      dispatch(getPopularVideos());
-    } else {
-      dispatch(getVideosByCategory(activeCategory));
-    }
+    dispatch(getPopularVideos());
   };
 
   return (
@@ -37,8 +30,8 @@ const HomeScreen = () => {
 
       <InfiniteScroll
         dataLength={videos.length}
-        next={fetchData}
         hasMore={true}
+        next={fetchData}
         loader={
           <div className="spinner-border text-danger d-block mx-auto"></div>
         }

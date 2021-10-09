@@ -26,8 +26,6 @@ const Video = ({ video }) => {
   const [channelIcon, setChannelIcon] = useState(null);
   const seconds = moment.duration(duration).asSeconds();
   const _duration = moment.utc(seconds * 1000).format("mm:ss");
-  const _videoId = id?.videoId || contentDetails?.videoId || id;
-
   useEffect(() => {
     const get_video_details = async () => {
       const {
@@ -43,6 +41,7 @@ const Video = ({ video }) => {
     };
     get_video_details();
   }, [_videoId]);
+  const _videoId = id?.videoId || contentDetails?.videoId || id;
   useEffect(() => {
     const get_channel_icon = async () => {
       const {
@@ -60,8 +59,7 @@ const Video = ({ video }) => {
   return (
     <div className="video">
       <div className="video__top">
-        {/* <img src={medium.url} alt="" /> */}
-        <LazyLoadImage src={medium.url} effect="blur" />
+        <img src={medium.url} alt="" />
         <span className="video__top__duration">{_duration}</span>
       </div>
       <div className="video__title">{title}</div>
