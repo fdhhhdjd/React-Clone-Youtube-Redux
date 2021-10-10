@@ -30,7 +30,7 @@ const Sidebar = ({ sidebar, handleToggleSidebar }) => {
           <span>Home</span>
         </li>
       </Link>
-      <Link to="/feed/subscriptions" style={{ textDecoration: "none" }}>
+      <Link to="/feed/subscriptions">
         <li>
           <MdSubscriptions size={23} />
           <span>Subscriptions</span>

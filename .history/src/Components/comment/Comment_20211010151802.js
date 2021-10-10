@@ -10,6 +10,7 @@ const Comment = ({ comment }) => {
       <img src={authorProfileImageUrl} alt="" className="mr-3 rounded-circle" />
       <div className="comment__body">
         <p className="mb-1 comment__header">
+          ádasd
           {authorDisplayName} • {moment(publishedAt).fromNow()}
         </p>
         <p className="mb-0">{textDisplay}</p>
