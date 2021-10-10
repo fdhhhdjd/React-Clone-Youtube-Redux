@@ -1,0 +1,20 @@
+export const keyWords = [
+  "All",
+  "Quốc Màng Tang",
+  "Huấn Hoa Hồng",
+  "Sơn Tùng",
+  "React js",
+  "Angular js",
+  "React Native",
+  "use of API",
+  "Redux",
+  "Music",
+  "Algorithm Art ",
+  "Bengali Songs",
+  "Coding",
+  "Football",
+  "Real Madrid",
+
+  "Poor Coder",
+  "Shwetabh",
+];
