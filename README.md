@@ -12,9 +12,9 @@
 
 # BackEnd Code By: Nguyễn Tiến Tài
 
-## WebSite: Chưa có.
+## WebSite: https://watchclone.surge.sh
 
-## MongoDb,Redis,Cookie,Session,ReactJs,...
+## ReactJs,Redux,Youtube-Api,Library multiple support.
 
 ## Tài Khoản Donate li Cf để có động lực code cho anh em tham khảo 😄😄
 
