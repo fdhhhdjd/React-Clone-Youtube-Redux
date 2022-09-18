@@ -24,6 +24,6 @@
 
 ## STK: 1651002972052
 
-## Chi Nhánh: NGAN HANG TMCP AN BINH (ABBANK)
+## Chi Nhánh: NGAN HANG TMCP AN BINH (ABBANK).
 
 ## SUPORT CONTACT: [profile-forme.surge.sh](https://profile-forme.surge.sh).
